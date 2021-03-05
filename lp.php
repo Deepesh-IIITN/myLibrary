@@ -116,7 +116,7 @@ $temp="";
 				}
 				else
 				{
-					$con = mysqli_connect('localhost','root','','library');
+					include("connection.php");
                     $query="SELECT * FROM `students`";
                     $run=mysqli_query($con,$query);
 					if($run==TRUE)
@@ -171,7 +171,7 @@ $temp="";
 			{
 				if($_SESSION['rn']==TRUE)
 				{
-					$con = mysqli_connect('localhost','root','','library');
+					include("connection.php");
                     $query="SELECT * FROM `students`";
                     $run=mysqli_query($con,$query);
 					if($run==TRUE)
@@ -229,12 +229,13 @@ $temp="";
 		   <?php
 		         if($flag==0)
 				 {
-					$con1= mysqli_connect('localhost','root','','library');
+					include("connection.php");
 					$str=strval($id);
 	                $str="s".$name."".$str;
 					$_SESSION['string']=$str;
+					$str=strtolower($str);
                     $query1="SELECT * FROM `$str`";
-                    $run1=mysqli_query($con1,$query1);
+                    $run1=mysqli_query($con,$query1);
 					if($run1==TRUE)
                     {
 						?>

@@ -10,7 +10,7 @@ $cpassword=$_POST['password2'];
 $dob=$_POST['dob'];
 $gender=$_POST['gender'];
 $uid=$_POST['uid'];
-$con = mysqli_connect('localhost','root','','library');
+include("connection.php");
 $query="INSERT INTO `students`(`first_name`, `last_name`, `college`, `Roll_no.`, `email`, `password`, `birthday`, `gender`, `uid`) VALUES ('$fname','$lname','$college','$roll','$email','$password','$dob','$gender','$uid')";
 $run=mysqli_query($con,$query);
 if($run==TRUE)

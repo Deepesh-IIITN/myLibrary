@@ -3,7 +3,7 @@ session_start();
 $email=$_POST['email'];
 $password=$_POST['password'];
 $flag=0;
-$con = mysqli_connect('localhost','root','','library');
+include("connection.php");
 $query="SELECT * FROM `students`";
 $query1="SELECT * FROM `teachers`";
 $run1=mysqli_query($con,$query1);

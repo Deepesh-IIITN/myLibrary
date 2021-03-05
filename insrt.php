@@ -7,7 +7,7 @@ $password=$_POST['password1'];
 $cpassword=$_POST['password2'];
 $dob=$_POST['dob'];
 $gender=$_POST['gender'];
-$con = mysqli_connect('localhost','root','','library');
+include("connection.php");
 $query="INSERT INTO `teachers`(`first name`, `last name`, `college`, `birthday`, `email`, `password`, `gender`) VALUES ('$fname','$lname','$college','$dob','$email','$password','$gender')";
 $run=mysqli_query($con,$query);
 if($run==TRUE)

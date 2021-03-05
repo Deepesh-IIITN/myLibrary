@@ -3,13 +3,7 @@
   <meta charset="UTF-8">
   <title>Login form</title>
   <style>
-  .A
-  {
-	  
-  }
-  
-  
-  
+
   </style>
 </head>
 

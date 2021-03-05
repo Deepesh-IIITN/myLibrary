@@ -70,7 +70,8 @@ $i=1;
 $temp=strval($_SESSION['lid']);
 $temp1=$_SESSION['lname'];
 $str2="ti".$temp1."".$temp;
-$con = mysqli_connect('localhost','root','','library');
+$str2=strtolower($str2);
+include("connection.php");
 $query="SELECT * FROM `$str2`";
 $run=mysqli_query($con,$query);
 if($run==TRUE)

@@ -30,7 +30,7 @@ else
 	 <hr>
      <div style="height:90%;width:30%;background-color:#e6f7ff;float:left;">
          <?php
-         $con = mysqli_connect('localhost','root','','library');
+         include("connection.php");
                     $query="SELECT * FROM `students`";
                     $run=mysqli_query($con,$query);
 					if($run==TRUE)
@@ -65,11 +65,12 @@ else
      <div style="height:90%;width:70%;background-color:white;float:right;">
            
 		   
-		  <?php $con1= mysqli_connect('localhost','root','','library');
+		  <?php include("connection.php");
 					$str=strval($id);
 	                $str="s".$name."".$str;
+					$str=strtolower($str);
                     $query1="SELECT * FROM `$str`";
-                    $run1=mysqli_query($con1,$query1);
+                    $run1=mysqli_query($con ,$query1);
 					if($run1==TRUE)
                     {
 						?>
